@@ -73,7 +73,7 @@ public extension BuildDistribution where Self == Debugger {
 public struct Playground: BuildDistribution {
     /// Active is the build is being run via a Playground
     public var isActive: Bool {
-        Bundle.main.bundleURL.absoluteString.localizedCaseInsensitiveContains("playgorund")
+        Bundle.main.bundleURL.absoluteString.localizedCaseInsensitiveContains("playground")
     }
 }
 
