@@ -51,7 +51,6 @@
 				541255B52861FE6300A21987 /* Shared */,
 				541255C42861FE6300A21987 /* macOS */,
 				541255BE2861FE6300A21987 /* Products */,
-				541255D52861FEA900A21987 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +78,6 @@
 				541255C52861FE6300A21987 /* macOS.entitlements */,
 			);
 			path = macOS;
-			sourceTree = "<group>";
-		};
-		541255D52861FEA900A21987 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

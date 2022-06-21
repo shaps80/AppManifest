@@ -10,8 +10,7 @@ struct AppConfigDemoApp: App {
             VStack {
                 Picker("Environment", selection: $currentEnvironment) {
                     ForEach(config.environments) { env in
-                        Text(env.name)
-                            .tag(env)
+                        Text(env.name).tag(env)
                     }
                 }
                 .pickerStyle(.segmented)
@@ -25,18 +24,19 @@ struct AppConfigDemoApp: App {
 }
 
 struct EnvironmentDetailView: View {
-    @SceneStorage("name") private var name: String = ""
     @EnvironmentSetting(\.remoteUrl) private var url
 
     var body: some View {
         VStack {
-            TextField("Name", text: $name)
             Text(url?.absoluteString ?? "No URL")
         }
     }
 }
 
 let config = AppConfiguration {
+    Environment(name: "Debug", distribution: .debugger)
+        .setting(\.remoteUrl, URL(string: "localhost:4444"))
+
     Environment(name: "Dev", configuration: .debug)
         .setting(\.remoteUrl, URL(string: "https://dev-api.com"))
 

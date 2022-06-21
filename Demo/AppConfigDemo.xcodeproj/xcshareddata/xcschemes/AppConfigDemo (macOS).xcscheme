@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "541255BC2861FE6300A21987"
+               BlueprintIdentifier = "541255C22861FE6300A21987"
                BuildableName = "AppConfigDemo.app"
-               BlueprintName = "AppConfigDemo (iOS)"
+               BlueprintName = "AppConfigDemo (macOS)"
                ReferencedContainer = "container:AppConfigDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "541255BC2861FE6300A21987"
+            BlueprintIdentifier = "541255C22861FE6300A21987"
             BuildableName = "AppConfigDemo.app"
-            BlueprintName = "AppConfigDemo (iOS)"
+            BlueprintName = "AppConfigDemo (macOS)"
             ReferencedContainer = "container:AppConfigDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "541255BC2861FE6300A21987"
+            BlueprintIdentifier = "541255C22861FE6300A21987"
             BuildableName = "AppConfigDemo.app"
-            BlueprintName = "AppConfigDemo (iOS)"
+            BlueprintName = "AppConfigDemo (macOS)"
             ReferencedContainer = "container:AppConfigDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
