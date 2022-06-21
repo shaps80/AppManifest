@@ -40,9 +40,9 @@ public extension BuildDistribution where Self == TestFlight {
 public struct AppStore: BuildDistribution {
     /// Returns `true` if the build was distributed from the AppStore
     public var isActive: Bool {
-        Bundle.main.appStoreReceiptURL?
-            .absoluteString
-            .localizedCaseInsensitiveContains("sandbox") == false
+        !TestFlight().isActive
+        && !Debugger().isActive
+        && !Playground().isActive
     }
 }
 
@@ -76,9 +76,7 @@ public struct Playground: BuildDistribution {
     }
     /// Active is the build is being run via a Playground
     public var isActive: Bool {
-        Bundle.allBundles
-            .map { $0.infoDictionary?.description }
-            .contains { $0?.localizedCaseInsensitiveContains("playground") == true }
+        (Bundle.main.bundleIdentifier ?? "").localizedCaseInsensitiveContains("playground")
     }
 }
 
