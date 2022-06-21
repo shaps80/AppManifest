@@ -2,8 +2,10 @@ import Foundation
 
 internal struct AnyBuildConfiguration: Equatable {
     var isActive: Bool
+    private let name: String
     init<C: BuildConfiguration>(_ configuration: C) {
         isActive = configuration.isActive
+        name = String(describing: C.self)
     }
 }
 

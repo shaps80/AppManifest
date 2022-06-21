@@ -1,9 +1,7 @@
 import Foundation
 
 /// Represents an Environment the app communicates with
-public struct Environment: Hashable, Identifiable, CustomStringConvertible {
-
-    public var id: String { name }
+public struct Environment: Hashable, CustomStringConvertible {
 
     /// A user friendly name to associate with this environment
     public let name: String
@@ -20,16 +18,42 @@ public struct Environment: Hashable, Identifiable, CustomStringConvertible {
         get { name.isEmpty ? .init() : _condition }
         set { _condition = newValue }
     }
-    private var _condition: EnvironmentCondition = .init(
-        distribution: nil,
-        configuration: .init(.release)
-    )
+    private var _condition: EnvironmentCondition = .init()
 
     /// Returns a new environment with the specified name
     /// - Parameters:
     ///   - name: A unique name for identifying this environment
     public init(name: String) {
         self.name = name
+        self.condition = .init(distribution: .init(AppStore()), configuration: .init(Release()))
+    }
+
+    /// Returns a new environment with the specified name
+    /// - Parameters:
+    ///   - name: A unique name for identifying this environment
+    ///   - distribution: The active distribution where this environment should be available
+    public init<D: BuildDistribution>(name: String, distribution: D) {
+        self.name = name
+        self.condition = .init(distribution: .init(distribution))
+    }
+
+    /// Returns a new environment with the specified name
+    /// - Parameters:
+    ///   - name: A unique name for identifying this environment
+    ///   - configuration: The active configuration where this environment should be available
+    public init<C: BuildConfiguration>(name: String, configuration: C) {
+        self.name = name
+        self.condition = .init(configuration: .init(configuration))
+    }
+
+    /// Returns a new environment with the specified name
+    /// - Parameters:
+    ///   - name: A unique name for identifying this environment
+    ///   - distribution: The active distribution where this environment should be available
+    ///   - configuration: The active configuration where this environment should be available
+    public init<D: BuildDistribution, C: BuildConfiguration>(name: String, distribution: D, configuration: C) {
+        self.name = name
+        self.condition = .init(distribution: .init(distribution), configuration: .init(configuration))
     }
 
     public static func == (lhs: Self, rhs: Self) -> Bool {
@@ -48,35 +72,11 @@ public struct Environment: Hashable, Identifiable, CustomStringConvertible {
 
 }
 
+extension Environment: Identifiable {
+    public var id: String { name }
+}
+
 public extension Environment {
-
-    /// Adds a condition where this environment should be active
-    /// - Parameter distribution: The active distribution where this environment should be available
-    func when<D: BuildDistribution>(distribution: D) -> Environment {
-        var env = self
-        env.condition.distribution = .init(distribution)
-        return env
-    }
-
-    /// Adds a condition where this environment should be active
-    /// - Parameter configuration: The active configuration where this environment should be available
-    func when<C: BuildConfiguration>(configuration: C) -> Environment {
-        var env = self
-        env.condition.configuration = .init(configuration)
-        return env
-    }
-
-    /// Adds a condition where this environment should be active
-    /// - Parameters:
-    ///   - distribution: The active distribution where this environment should be available
-    ///   - configuration: The active configuration where this environment should be available
-    func when<D: BuildDistribution, C: BuildConfiguration>(distribution: D, configuration: C) -> Environment {
-        var env = self
-        env.condition.distribution = .init(distribution)
-        env.condition.configuration = .init(configuration)
-        return env
-    }
-
     /// Sets the setting value of the specified key path to the given value.
     ///
     /// Use this modifier to set one of the writable properties of the

@@ -7,7 +7,8 @@ public struct EnvironmentSetting<Value>: DynamicProperty {
     private let keyPath: KeyPath<SettingValues, Value>
 
     public var wrappedValue: Value {
-        environment.settings[keyPath: keyPath]
+        assert(!environment.name.isEmpty, "A deployment environment was not injecting into your SwiftUI environment:\n  .environment(\\.deploymentEnvironment, config.preferredEnvironment)")
+        return environment.settings[keyPath: keyPath]
     }
 
     public init(_ keyPath: KeyPath<SettingValues, Value>) {

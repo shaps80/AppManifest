@@ -10,10 +10,10 @@ public struct AppConfiguration {
     /// taking into account active conditions
     public var preferredEnvironment: Environment {
         let activeDistributions = environments
-            .filter { $0.condition.distribution?.isActive == true }
+            .filter { $0.condition.distribution.isActive }
 
         let activeConfigurations = environments
-            .filter { $0.condition.configuration?.isActive == true }
+            .filter { $0.condition.configuration.isActive }
 
         /**
          Find the most suitable environment using the following priority:
@@ -21,13 +21,15 @@ public struct AppConfiguration {
          1. Distribution AND configuration are both active
          2. Distribution only is active
          3. Configuration only is active
-         4. First available Release configuration
-         5. First available Environment
+         4. First available Environment
          */
 
-        return activeDistributions.first
+        // distribution: debugger AND configuration: RELEASE
+        // configuration: DEBUG
+
+        return (activeDistributions + activeConfigurations).first
+        ?? activeDistributions.first
         ?? activeConfigurations.first
-        ?? environments.first { $0.condition.configuration == .init(.release) }
         ?? environments.first!
     }
 

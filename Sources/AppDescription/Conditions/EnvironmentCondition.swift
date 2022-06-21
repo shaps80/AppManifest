@@ -1,11 +1,10 @@
 import Foundation
 
 internal struct EnvironmentCondition: Equatable {
-    var distribution: AnyBuildDistribution?
-    var configuration: AnyBuildConfiguration?
+    var distribution: AnyBuildDistribution = .init(.appStore)
+    var configuration: AnyBuildConfiguration = .init(.release)
 
     var isActive: Bool {
-        (distribution?.isActive ?? false)
-        || (configuration?.isActive ?? false)
+        distribution.isActive || configuration.isActive
     }
 }
