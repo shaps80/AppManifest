@@ -1,3 +1,8 @@
+![ios](https://img.shields.io/badge/iOS-green)
+![tv](https://img.shields.io/badge/tvOS-green)
+![watchOS](https://img.shields.io/badge/iOS-green)
+![mac](https://img.shields.io/badge/macOS-green)
+
 # AppManifest
 
 Introducing **AppManifest**, a library for defining your app's deployed environment configuration.
@@ -6,7 +11,7 @@ Inspired by the Swift Package manifest and SwiftUI APIs, the library aims to pro
 
 ## Usage
 
-Using `resultBuilder` it couldn't be easier to define your `Environment`'s:
+Using a `resultBuilder` it couldn't be easier to define your `Environment`'s:
 
 ```swift
 let config = AppConfiguration {
@@ -85,3 +90,10 @@ struct DemoApp: App {
 
 > Note `deployedEnvironment` is a pre-defined `EnvironmentKey` you **must** use in order for the property wrapper to function.
 
+## Installation
+
+You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (**preferred**)
+
+To install using Swift Package Manager, add this to the `dependencies` section of your `Package.swift` file:
+
+`.package(url: "https://github.com/shaps80/AppManifest.git", .upToNextMinor(from: "1.0.0"))`
