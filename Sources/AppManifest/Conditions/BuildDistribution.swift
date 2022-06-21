@@ -68,3 +68,16 @@ public extension BuildDistribution where Self == Debugger {
     /// Active if the build is being run via a debugger (e.g. Xcode)
     static var debugger: Self { .init() }
 }
+
+/// Represents a build being run in a Playground
+public struct Playground: BuildDistribution {
+    /// Active is the build is being run via a Playground
+    public var isActive: Bool {
+        Bundle.main.bundleURL.absoluteString.localizedCaseInsensitiveContains("playgorund")
+    }
+}
+
+public extension BuildDistribution where Self == Playground {
+    /// Active is the build is being run via a Playground
+    static var playground: Self { .init() }
+}
