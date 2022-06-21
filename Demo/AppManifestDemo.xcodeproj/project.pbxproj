@@ -20,8 +20,8 @@
 		541255B82861FE6300A21987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		541255C52861FE6300A21987 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		541255E8286255BF00A21987 /* AppManifest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppManifest; path = ..; sourceTree = "<group>"; };
-		541255ED286255E400A21987 /* AppConfigDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AppConfigDemo.app; path = "/Users/shaps/Developer/AppManifest/Demo/build/Debug-iphoneos/AppConfigDemo.app"; sourceTree = "<absolute>"; };
-		541255EE286255E800A21987 /* AppConfigDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AppConfigDemo.app; path = /Users/shaps/Developer/AppManifest/Demo/build/Debug/AppConfigDemo.app; sourceTree = "<absolute>"; };
+		541256002862582900A21987 /* AppManifestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppManifestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		541256012862582900A21987 /* AppManifestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppManifestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +50,8 @@
 				541255E8286255BF00A21987 /* AppManifest */,
 				541255B52861FE6300A21987 /* Shared */,
 				541255C42861FE6300A21987 /* macOS */,
+				541256002862582900A21987 /* AppManifestDemo.app */,
+				541256012862582900A21987 /* AppManifestDemo.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,7 +92,7 @@
 				541255EB286255CB00A21987 /* AppManifest */,
 			);
 			productName = "AppConfigDemo (iOS)";
-			productReference = 541255ED286255E400A21987 /* AppConfigDemo.app */;
+			productReference = 541256002862582900A21987 /* AppManifestDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		541255C22861FE6300A21987 /* AppDemo (macOS) */ = {
@@ -110,7 +112,7 @@
 				541255E9286255C600A21987 /* AppManifest */,
 			);
 			productName = "AppConfigDemo (macOS)";
-			productReference = 541255EE286255E800A21987 /* AppConfigDemo.app */;
+			productReference = 541256012862582900A21987 /* AppManifestDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +133,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 541255B42861FE6200A21987 /* Build configuration list for PBXProject "AppConfigDemo" */;
+			buildConfigurationList = 541255B42861FE6200A21987 /* Build configuration list for PBXProject "AppManifestDemo" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,8 +321,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppConfigDemo;
-				PRODUCT_NAME = AppConfigDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppManifestDemo;
+				PRODUCT_NAME = AppManifestDemo;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -349,8 +351,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppConfigDemo;
-				PRODUCT_NAME = AppConfigDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppManifestDemo;
+				PRODUCT_NAME = AppManifestDemo;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -379,8 +381,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppConfigDemo;
-				PRODUCT_NAME = AppConfigDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppManifestDemo;
+				PRODUCT_NAME = AppManifestDemo;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -407,8 +409,8 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppConfigDemo;
-				PRODUCT_NAME = AppConfigDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.benkau.AppManifestDemo;
+				PRODUCT_NAME = AppManifestDemo;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -418,7 +420,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		541255B42861FE6200A21987 /* Build configuration list for PBXProject "AppConfigDemo" */ = {
+		541255B42861FE6200A21987 /* Build configuration list for PBXProject "AppManifestDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				541255CC2861FE6300A21987 /* Debug */,

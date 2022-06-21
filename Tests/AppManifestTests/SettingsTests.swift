@@ -1,6 +1,6 @@
 import SwiftUI
 import XCTest
-@testable import AppDescription
+@testable import AppManifest
 
 final class SettingsTests: XCTestCase {
 
