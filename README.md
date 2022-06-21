@@ -1,7 +1,7 @@
-![ios](https://img.shields.io/badge/iOS-green)
-![tv](https://img.shields.io/badge/tvOS-green)
-![watchOS](https://img.shields.io/badge/iOS-green)
-![mac](https://img.shields.io/badge/macOS-green)
+![mac](https://img.shields.io/badge/macOS-FD961A)
+![ios](https://img.shields.io/badge/iOS-0C62C7)
+![tv](https://img.shields.io/badge/tvOS-8CFFB0)
+![watchOS](https://img.shields.io/badge/iOS-DE1F51)
 
 # AppManifest
 
