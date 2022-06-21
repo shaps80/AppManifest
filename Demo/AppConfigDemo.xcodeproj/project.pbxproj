@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		541255C62861FE6300A21987 /* AppConfigDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541255B62861FE6300A21987 /* AppConfigDemoApp.swift */; };
-		541255C72861FE6300A21987 /* AppConfigDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541255B62861FE6300A21987 /* AppConfigDemoApp.swift */; };
+		541255C62861FE6300A21987 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541255B62861FE6300A21987 /* DemoApp.swift */; };
+		541255C72861FE6300A21987 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541255B62861FE6300A21987 /* DemoApp.swift */; };
 		541255CA2861FE6300A21987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 541255B82861FE6300A21987 /* Assets.xcassets */; };
 		541255CB2861FE6300A21987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 541255B82861FE6300A21987 /* Assets.xcassets */; };
-		541255DF286207A600A21987 /* AppDescription in Frameworks */ = {isa = PBXBuildFile; productRef = 541255DE286207A600A21987 /* AppDescription */; };
-		541255E1286207AC00A21987 /* AppDescription in Frameworks */ = {isa = PBXBuildFile; productRef = 541255E0286207AC00A21987 /* AppDescription */; };
+		541255EA286255C600A21987 /* AppManifest in Frameworks */ = {isa = PBXBuildFile; productRef = 541255E9286255C600A21987 /* AppManifest */; };
+		541255EC286255CB00A21987 /* AppManifest in Frameworks */ = {isa = PBXBuildFile; productRef = 541255EB286255CB00A21987 /* AppManifest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		541255B62861FE6300A21987 /* AppConfigDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigDemoApp.swift; sourceTree = "<group>"; };
+		541255B62861FE6300A21987 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		541255B82861FE6300A21987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		541255BD2861FE6300A21987 /* AppConfigDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppConfigDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		541255C32861FE6300A21987 /* AppConfigDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppConfigDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		541255C52861FE6300A21987 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		541255E228620D4500A21987 /* AppDescription */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppDescription; path = ..; sourceTree = "<group>"; };
+		541255E8286255BF00A21987 /* AppManifest */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppManifest; path = ..; sourceTree = "<group>"; };
+		541255ED286255E400A21987 /* AppConfigDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AppConfigDemo.app; path = "/Users/shaps/Developer/AppManifest/Demo/build/Debug-iphoneos/AppConfigDemo.app"; sourceTree = "<absolute>"; };
+		541255EE286255E800A21987 /* AppConfigDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AppConfigDemo.app; path = /Users/shaps/Developer/AppManifest/Demo/build/Debug/AppConfigDemo.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541255E1286207AC00A21987 /* AppDescription in Frameworks */,
+				541255EC286255CB00A21987 /* AppManifest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541255DF286207A600A21987 /* AppDescription in Frameworks */,
+				541255EA286255C600A21987 /* AppManifest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,29 +47,19 @@
 		541255B02861FE6200A21987 = {
 			isa = PBXGroup;
 			children = (
-				541255E228620D4500A21987 /* AppDescription */,
+				541255E8286255BF00A21987 /* AppManifest */,
 				541255B52861FE6300A21987 /* Shared */,
 				541255C42861FE6300A21987 /* macOS */,
-				541255BE2861FE6300A21987 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		541255B52861FE6300A21987 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				541255B62861FE6300A21987 /* AppConfigDemoApp.swift */,
+				541255B62861FE6300A21987 /* DemoApp.swift */,
 				541255B82861FE6300A21987 /* Assets.xcassets */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		541255BE2861FE6300A21987 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				541255BD2861FE6300A21987 /* AppConfigDemo.app */,
-				541255C32861FE6300A21987 /* AppConfigDemo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		541255C42861FE6300A21987 /* macOS */ = {
@@ -83,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		541255BC2861FE6300A21987 /* AppConfigDemo (iOS) */ = {
+		541255BC2861FE6300A21987 /* AppDemo (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 541255CE2861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppConfigDemo (iOS)" */;
+			buildConfigurationList = 541255CE2861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppDemo (iOS)" */;
 			buildPhases = (
 				541255B92861FE6300A21987 /* Sources */,
 				541255BA2861FE6300A21987 /* Frameworks */,
@@ -95,17 +85,17 @@
 			);
 			dependencies = (
 			);
-			name = "AppConfigDemo (iOS)";
+			name = "AppDemo (iOS)";
 			packageProductDependencies = (
-				541255E0286207AC00A21987 /* AppDescription */,
+				541255EB286255CB00A21987 /* AppManifest */,
 			);
 			productName = "AppConfigDemo (iOS)";
-			productReference = 541255BD2861FE6300A21987 /* AppConfigDemo.app */;
+			productReference = 541255ED286255E400A21987 /* AppConfigDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		541255C22861FE6300A21987 /* AppConfigDemo (macOS) */ = {
+		541255C22861FE6300A21987 /* AppDemo (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 541255D12861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppConfigDemo (macOS)" */;
+			buildConfigurationList = 541255D12861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppDemo (macOS)" */;
 			buildPhases = (
 				541255BF2861FE6300A21987 /* Sources */,
 				541255C02861FE6300A21987 /* Frameworks */,
@@ -115,12 +105,12 @@
 			);
 			dependencies = (
 			);
-			name = "AppConfigDemo (macOS)";
+			name = "AppDemo (macOS)";
 			packageProductDependencies = (
-				541255DE286207A600A21987 /* AppDescription */,
+				541255E9286255C600A21987 /* AppManifest */,
 			);
 			productName = "AppConfigDemo (macOS)";
-			productReference = 541255C32861FE6300A21987 /* AppConfigDemo.app */;
+			productReference = 541255EE286255E800A21987 /* AppConfigDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,12 +140,12 @@
 				Base,
 			);
 			mainGroup = 541255B02861FE6200A21987;
-			productRefGroup = 541255BE2861FE6300A21987 /* Products */;
+			productRefGroup = 541255B02861FE6200A21987;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				541255BC2861FE6300A21987 /* AppConfigDemo (iOS) */,
-				541255C22861FE6300A21987 /* AppConfigDemo (macOS) */,
+				541255BC2861FE6300A21987 /* AppDemo (iOS) */,
+				541255C22861FE6300A21987 /* AppDemo (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -184,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541255C62861FE6300A21987 /* AppConfigDemoApp.swift in Sources */,
+				541255C62861FE6300A21987 /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541255C72861FE6300A21987 /* AppConfigDemoApp.swift in Sources */,
+				541255C72861FE6300A21987 /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +427,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		541255CE2861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppConfigDemo (iOS)" */ = {
+		541255CE2861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppDemo (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				541255CF2861FE6300A21987 /* Debug */,
@@ -446,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		541255D12861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppConfigDemo (macOS)" */ = {
+		541255D12861FE6300A21987 /* Build configuration list for PBXNativeTarget "AppDemo (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				541255D22861FE6300A21987 /* Debug */,
@@ -458,13 +448,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		541255DE286207A600A21987 /* AppDescription */ = {
+		541255E9286255C600A21987 /* AppManifest */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppDescription;
+			productName = AppManifest;
 		};
-		541255E0286207AC00A21987 /* AppDescription */ = {
+		541255EB286255CB00A21987 /* AppManifest */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = AppDescription;
+			productName = AppManifest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

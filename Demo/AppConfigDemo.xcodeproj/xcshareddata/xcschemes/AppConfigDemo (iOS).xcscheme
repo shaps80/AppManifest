@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "541255BC2861FE6300A21987"
                BuildableName = "AppConfigDemo.app"
-               BlueprintName = "AppConfigDemo (iOS)"
+               BlueprintName = "AppDemo (iOS)"
                ReferencedContainer = "container:AppConfigDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "541255BC2861FE6300A21987"
             BuildableName = "AppConfigDemo.app"
-            BlueprintName = "AppConfigDemo (iOS)"
+            BlueprintName = "AppDemo (iOS)"
             ReferencedContainer = "container:AppConfigDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "541255BC2861FE6300A21987"
             BuildableName = "AppConfigDemo.app"
-            BlueprintName = "AppConfigDemo (iOS)"
+            BlueprintName = "AppDemo (iOS)"
             ReferencedContainer = "container:AppConfigDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

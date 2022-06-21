@@ -1,8 +1,8 @@
 import SwiftUI
-import AppDescription
+import AppManifest
 
 @main
-struct AppConfigDemoApp: App {
+struct DemoApp: App {
     @State private var currentEnvironment = config.preferredEnvironment
     
     var body: some Scene {
@@ -27,9 +27,7 @@ struct EnvironmentDetailView: View {
     @EnvironmentSetting(\.remoteUrl) private var url
 
     var body: some View {
-        VStack {
-            Text(url?.absoluteString ?? "No URL")
-        }
+        Text(url?.absoluteString ?? "No URL")
     }
 }
 

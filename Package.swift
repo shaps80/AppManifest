@@ -4,18 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "AppDescription",
+    name: "AppManifest",
     products: [
         .library(
-            name: "AppDescription",
-            targets: ["AppDescription"]
+            name: "AppManifest",
+            targets: ["AppManifest"]
         ),
     ],
     targets: [
-        .target(name: "AppDescription"),
+        .target(name: "AppManifest"),
         .testTarget(
-            name: "AppDescriptionTests",
-            dependencies: ["AppDescription"]
+            name: "AppManifestTests",
+            dependencies: ["AppManifest"]
         ),
     ]
 )
