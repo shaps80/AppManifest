@@ -71,9 +71,6 @@ public extension BuildDistribution where Self == Debugger {
 
 /// Represents a build being run in a Playground
 public struct Playground: BuildDistribution {
-    public init() {
-        print(Bundle.allBundles)
-    }
     /// Active is the build is being run via a Playground
     public var isActive: Bool {
         (Bundle.main.bundleIdentifier ?? "").localizedCaseInsensitiveContains("playground")
