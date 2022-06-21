@@ -1,5 +1,5 @@
 ![watchOS](https://img.shields.io/badge/watchOS-DE1F51)
-![macOS](https://img.shields.io/badge/macOS-FD961A)
+![macOS](https://img.shields.io/badge/macOS-EE751F)
 ![tvOS](https://img.shields.io/badge/tvOS-00B9BB)
 ![ios](https://img.shields.io/badge/iOS-0C62C7)
 
