@@ -27,7 +27,7 @@ import Foundation
 /// To set the environment value for a view and all its subviews, add the
 /// ``View/environment(_:_:)`` view modifier to that view:
 ///
-///     Environment(name: "Dev") {
+///     Environment(name: "Dev") { }
 ///         .setting(\.myCustomValue, "Another string")
 ///
 /// To read the value from an `Environment` use the
@@ -68,6 +68,7 @@ public protocol SettingKey {
 /// ``settings`` property:
 ///
 ///     config.preferredEnvironment.settings.myCustomValue
+///     
 public struct SettingValues: CustomStringConvertible {
     internal var data: [SettingPropertyKey: Any] = [:]
 
