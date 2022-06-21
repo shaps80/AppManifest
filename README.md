@@ -90,6 +90,50 @@ struct DemoApp: App {
 
 > Note `deployedEnvironment` is a pre-defined `EnvironmentKey` you **must** use in order for the property wrapper to function.
 
+## Custom Distribution and Configuration
+
+The library includes the most common distributions:
+
+- AppStore
+- TestFlight
+- Debugger (Xcode, lldb, etc.)
+
+and Configurations
+
+- Debug
+- Release
+
+But you can also extend the library to support your own custom types:
+
+```swift
+struct Beta: Configuration {
+    // Lets make it active whenever `BETA` has been defined
+    var isActive: Bool { 
+        #if BETA
+        return true
+        #else
+        return false
+        #endif
+    }
+}
+```
+
+Taking inspiration from SwiftUI style modifiers:
+
+```swift
+extension Configuration where Self == Beta {
+    static var beta: Self { .init() }
+}
+```
+
+We can now use this to define an `Environment`:
+
+```swift
+Environment(name: "Beta", configuration: .beta)
+```
+
+> The process for creating a custom `Distribution` is identical.
+
 ## Installation
 
 You can install manually (by copying the files in the `Sources` directory) or using Swift Package Manager (**preferred**)
