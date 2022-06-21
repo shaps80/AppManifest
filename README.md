@@ -2,7 +2,7 @@
 
 Introducing a library for defining your app's deployment environment configuration.
 
-Inspired by the Swift Package manifest, the library aims to provide a type-safe _description_ of the available environments, the conditions in which they're available and even custom settings that should be applied when using that environment.
+Inspired by the Swift Package manifest and SwiftUI, the library aims to provide a type-safe _description_ of the available environments, the conditions in which they're available and even custom settings that should be applied when using that environment.
 
 ## Usage
 
@@ -15,6 +15,8 @@ let config = AppConfiguration {
     Environment(name: "Release", distribution: .appStore)
 }
 ```
+
+> Note the use of a `resultBuilder`, simplifies defining our `Environment`'s
 
 Its also common to have `Environment` specific settings like API URLs and more. The library supports this similarly to how `EnvironmentValues` are supported in SwiftUI, making it easy for you to extend in a familiar, type-safe manner.
 
@@ -35,4 +37,5 @@ Once you have configured your `Environment`'s and any associated settings, you c
 config.preferredEnvironment
 ```
 
+You can also 
 ## Features

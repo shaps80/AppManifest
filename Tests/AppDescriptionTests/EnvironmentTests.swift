@@ -3,9 +3,23 @@ import XCTest
 
 final class EnvironmentTests: XCTestCase {
 
+    func test_namedEnvironment() {
+        let dev = Environment(name: "Dev", configuration: .mock(isActive: true))
+
+        let config = AppConfiguration {
+            Environment(name: "AppStore1", distribution: .mock(isActive: true), configuration: .mock(isActive: true))
+            Environment(name: "AppStore2", distribution: .mock(isActive: true), configuration: .mock(isActive: true))
+            dev
+            Environment(name: "Staging", distribution: .mock(isActive: true))
+        }
+
+        XCTAssertEqual(config.environment(named: "Dev")?.name, dev.name)
+        XCTAssertEqual(config.environment(named: "Test")?.name, nil)
+    }
+
     func test_duplicateConfigurations() {
         let actual = AppConfiguration {
-            Environment(name: "Dev", configuration: .debug)
+            Environment(name: "Dev", configuration: .mock(isActive: true))
             Environment(name: "AppStore1", distribution: .mock(isActive: true), configuration: .mock(isActive: true))
             Environment(name: "AppStore2", distribution: .mock(isActive: true), configuration: .mock(isActive: true))
             Environment(name: "Staging", distribution: .mock(isActive: true))
@@ -97,10 +111,10 @@ private struct MockConfiguration: BuildConfiguration {
     var isActive: Bool
 }
 
-extension BuildDistribution where Self == MockDistribution {
+private extension BuildDistribution where Self == MockDistribution {
     static func mock(isActive: Bool) -> Self { .init(isActive: isActive) }
 }
 
-extension BuildConfiguration where Self == MockConfiguration {
+private extension BuildConfiguration where Self == MockConfiguration {
     static func mock(isActive: Bool) -> Self { .init(isActive: isActive) }
 }

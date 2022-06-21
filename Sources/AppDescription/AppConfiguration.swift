@@ -46,4 +46,8 @@ public struct AppConfiguration {
         self.environments = environments
     }
 
+    public func environment(named name: String) -> Environment? {
+        environments.first { $0.name == name }
+    }
+
 }
